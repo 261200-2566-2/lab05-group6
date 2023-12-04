@@ -35,29 +35,29 @@ public class Human extends Characters{
                 if(!humanAcc[0]){
                     humanAcc[0] = true;
                     setAtk(getAtk()+sword.getSwordDmg());
-                    System.out.println("You have equipped the sword.");
-                }System.out.println("You already have a sword equipped.");
+                    System.out.println(getName() + " has equipped the sword.");
+                }else System.out.println(getName() + " already has a sword equipped.");
                 break;
             case "shield":
                 if(!humanAcc[1]){
                     humanAcc[1] = true;
                     setDef(getDef()+shield.getShieldDef());
-                    System.out.println("You have equipped the shield.");
-                }System.out.println("You already have a shield equipped.");
+                    System.out.println(getName() + " has equipped the shield.");
+                }else System.out.println(getName() + " already has a shield equipped.");
                 break;
             case "ring":
                 if(!humanAcc[2]){
                     humanAcc[2] = true;
                     setMana(getMana()+getRing().getBoostMana());
-                    System.out.println("You have equipped the ring.");
-                }else System.out.println("You already have a ring equipped.");
+                    System.out.println(getName() + " has equipped the ring.");
+                }else System.out.println(getName() + " already has a ring equipped.");
                 break;
             case "boots":
                 if(!humanAcc[3]){
                     humanAcc[3] = true;
                     setSpeed(getSpeed()+getBoots().getฺBoostSpeed());
-                    System.out.println("You have equipped the boots.");
-                }else System.out.println("You already have boots equipped.");
+                    System.out.println(getName() + " has equipped the boots.");
+                }else System.out.println(getName() + " already has boots equipped.");
                 break;
             default:
                 System.out.println("Wrong input!");
@@ -70,29 +70,29 @@ public class Human extends Characters{
                 if(humanAcc[0]){
                     humanAcc[0] = false;
                     setAtk(getAtk()-sword.getSwordDmg());
-                    System.out.println("You have unequipped the sword.");
-                }else System.out.println("You don't have a sword equipped.");
+                    System.out.println(getName() + " has unequipped the sword.");
+                }else System.out.println(getName() + " doesn't have a sword equipped.");
                 break;
             case "shield":
                 if(humanAcc[1]){
                     humanAcc[1] = false;
                     setDef(getDef()-shield.getShieldDef());
-                    System.out.println("You have unequipped the shield.");
-                }else System.out.println("You don't have a shield equipped.");
+                    System.out.println(getName() + " has unequipped the shield.");
+                }else System.out.println(getName() + " doesn't have a shield equipped.");
                 break;
             case "ring":
                 if(humanAcc[2]){
                     humanAcc[2] = false;
                     setMana(getMana()-getRing().getBoostMana());
-                    System.out.println("You have unequipped the ring.");
-                }else System.out.println("You don't have a ring equipped.");
+                    System.out.println(getName() + " has unequipped the ring.");
+                }else System.out.println(getName() + " doesn't have a ring equipped.");
                 break;
             case "boots":
                 if(humanAcc[3]){
                     humanAcc[3] = false;
                     setSpeed(getSpeed()-getBoots().getฺBoostSpeed());
-                    System.out.println("You have unequipped the boots.");
-                }else System.out.println("You don't have boots equipped.");
+                    System.out.println(getName() + " has unequipped the boots.");
+                }else System.out.println(getName() + " doesn't have boots equipped.");
                 break;
             default:
                 System.out.println("Wrong input!");
@@ -106,32 +106,32 @@ public class Human extends Characters{
                     setMoney(getMoney()-sword.getUpgradePrice());
                     sword.upgrade();
                     setAtk(getAtk()+ sword.getSwordDmg());
-                    System.out.println("The sword has been upgraded to LV." + sword.getLevel());
-                }else System.out.println("There is not enough money to upgrade the sword.");
+                    System.out.println(getName() + "'s sword has been upgraded to Level " + sword.getLevel() + ".");
+                }else System.out.println(getName() + " doesn't have enough money to upgrade the sword.");
                 break;
             case "shield":
                 if(getMoney() >= shield.getUpgradePrice()){
                     setMoney(getMoney()-shield.getUpgradePrice());
                     shield.upgrade();
                     setDef(getDef()+ shield.getShieldDef());
-                    System.out.println("The shield has been upgraded to LV." + shield.getLevel());
-                }else System.out.println("There is not enough money to upgrade the shield.");
+                    System.out.println(getName() + "'s shield has been upgraded to Level " + shield.getLevel() + ".");
+                }else System.out.println(getName() + " doesn't have enough money to upgrade the shield.");
                 break;
             case "ring":
                 if(getMoney() >= getRing().getUpgradePrice()){
                     setMoney(getMoney()-getRing().getUpgradePrice());
                     getRing().upgrade();
                     setMana(getMana()+getRing().getBoostMana());
-                    System.out.println("The ring has been upgraded to LV." + getRing().getLevel());
-                } System.out.println("There is not enough money to upgrade the ring.");
+                    System.out.println(getName() + "'s ring has been upgraded to Level " + getRing().getLevel() + ".");
+                }else System.out.println(getName() + " doesn't have enough money to upgrade the ring.");
                 break;
             case "boots":
                 if(getMoney() >= getBoots().getUpgradePrice()){
                     setMoney(getMoney()-getBoots().getUpgradePrice());
                     getBoots().upgrade();
                     setSpeed(getSpeed()+getBoots().getฺBoostSpeed());
-                    System.out.println("The boots has been upgraded to LV." + getBoots().getLevel());
-                } System.out.println("There is not enough money to upgrade the boots.");
+                    System.out.println(getName() + "'s boots has been upgraded to Level " + getBoots().getLevel() + ".");
+                }else System.out.println(getName() + " doesn't have enough money to upgrade the boots.");
                 break;
             default:
                 System.out.println("Wrong input!");

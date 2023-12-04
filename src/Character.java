@@ -6,6 +6,7 @@ public interface Character {
     void unEquip(String a);
     void upgrade(String a);
     boolean isDead();
+    String getName();
     void setName(String n);
     void setCType(String s);
     int getLevel();

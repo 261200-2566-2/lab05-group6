@@ -48,6 +48,7 @@ public class Characters implements Character{
     public void unEquip(String a){}
     public void upgrade(String a){}
     public boolean isDead(){ return hp <= 0; }
+    public String getName() { return name; }
     public void setName(String n){ name = n; }
     public void setCType(String s){ cType = s; }
     public int getLevel() { return level; }
